@@ -10,6 +10,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    // JAVA PLUGIN
     id 'java'
 }
 
@@ -29,10 +30,20 @@ Date dtAhora = new Date();
 //==========    PROPIEDADES  FINAL   ============
 //================================================
 
+
+//================================================
+//======PROPIEDADES  GLOBALES  INICIO  ===========
+//================================================
 sourceCompatibility = "1.8"
 version = "1.0.0"
 archivesBaseName = 'pe.com.arland.cliente1.registro'
+//================================================
+//======PROPIEDADES  GLOBALES  FINAL  ============
+//================================================
 
+//================================================
+//=== INICIO  PERSONALIZACION DEL JAR   ==========
+//================================================
 jar {
     manifest {
     attributes("Implementation-Title": nombreProyecto,
@@ -41,6 +52,9 @@ jar {
                "Main-Class" : "pe.com.arland.cliente1.registro.App")
     }
 }
+//================================================
+//====FINAL  PERSONALIZACION DEL JAR    ==========
+//================================================
 
 repositories {
     // Use JCenter for resolving dependencies.
