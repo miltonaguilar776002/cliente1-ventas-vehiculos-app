@@ -18,10 +18,8 @@ plugins {
 //================================================
 //PROPIEDADES DEFINIDAS CON EXT FORMA 1
 ext {
-	nombreProyecto = "Background Arland Venta de Vehiculos"
-	versionCompilado = "1.0.0"
+	nombreProyecto = "Background-Arland-Venta-Vehiculos"
 	correo = "milton.aguilar.776002@gmail.com"
-	
 }
 // PROPIEDADES DEFINIDAS CON EXT FORMA2
 ext.telefono = "999999999"
@@ -33,14 +31,16 @@ Date dtAhora = new Date();
 
 sourceCompatibility = "1.8"
 version = "1.0.0"
+archivesBaseName = 'pe.com.arland.cliente1.registro'
 
-
-// jar {
-//    manifest {
-//        attributes("Implementation-Title": "Gradle",
-//                   "Implementation-Version": archiveVersion)
-//    }
-//}
+jar {
+    manifest {
+    attributes("Implementation-Title": nombreProyecto,
+               "Implementation-Version": version,
+               // CUANDO ES LLAMADO POR JAVA -JAR "NombreJar"
+               "Main-Class" : "pe.com.arland.cliente1.registro.App")
+    }
+}
 
 repositories {
     // Use JCenter for resolving dependencies.
@@ -59,21 +59,17 @@ dependencies {
 }
 
 application {
-    // Define the main class for the application.
+    //MAIN CLASS SOLO PARA APPLICATION CUANDO ES LLAMADO POR GRADLE -Q RUN "NombreJar"
     mainClass = 'pe.com.arland.cliente1.registro.App'
 }
 
 task compilar {
 	println("===========================================================")
-	println("=====    >>INICIO DE COMPILACION :"+ nombreProyecto +"/" +versionCompilado + "=====")
+	println("=====    >>INICIO DE COMPILACION :"+ nombreProyecto +"/" +version + "=====")
 	println("=====    COMENZADO A LAS :"+ dtAhora + "======" )
 	println("=====    EN CASO DE ERROR LLAMAR A :"+ correo + "==" + telefono )
 	println("===========================================================")
-
 	println("1. ESTOY COMPILANDO")	
-	
-	
-
 	println("===========================================================")
 	println("=====     >>FINAL DE COMPILACION =====")
 	println("===========================================================")
