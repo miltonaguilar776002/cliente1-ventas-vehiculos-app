@@ -10,6 +10,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'java'
 }
 
 //================================================
@@ -17,8 +18,8 @@ plugins {
 //================================================
 //PROPIEDADES DEFINIDAS CON EXT FORMA 1
 ext {
-	nombre = "Background Arland Venta de Vehiculos"
-	version = "1.0.0"
+	nombreProyecto = "Background Arland Venta de Vehiculos"
+	versionCompilado = "1.0.0"
 	correo = "milton.aguilar.776002@gmail.com"
 	
 }
@@ -29,6 +30,17 @@ Date dtAhora = new Date();
 //================================================
 //==========    PROPIEDADES  FINAL   ============
 //================================================
+
+sourceCompatibility = "1.8"
+version = "1.0.0"
+
+
+// jar {
+//    manifest {
+//        attributes("Implementation-Title": "Gradle",
+//                   "Implementation-Version": archiveVersion)
+//    }
+//}
 
 repositories {
     // Use JCenter for resolving dependencies.
@@ -52,16 +64,40 @@ application {
 }
 
 task compilar {
-	println("Estoy compilando")
+	println("===========================================================")
+	println("=====    >>INICIO DE COMPILACION :"+ nombreProyecto +"/" +versionCompilado + "=====")
+	println("=====    COMENZADO A LAS :"+ dtAhora + "======" )
+	println("=====    EN CASO DE ERROR LLAMAR A :"+ correo + "==" + telefono )
+	println("===========================================================")
+
+	println("1. ESTOY COMPILANDO")	
+	
+	
+
+	println("===========================================================")
+	println("=====     >>FINAL DE COMPILACION =====")
+	println("===========================================================")
 }
 
 
 task empaquetar {
+	println("===========================================================")
+	println("=====     >>INICIO EMPAQUETADO  =====")
+	println("===========================================================")
 	println("Estoy empaquetando")
+	println("===========================================================")
+	println("=====     >>FINAL  EMPAQUETADO  =====")
+	println("===========================================================")
 }
 
 task testear {
+	println("===========================================================")
+	println("=====     >>INICIO TESTING  =====")
+	println("===========================================================")
 	println("Estoy testeando")
+	println("===========================================================")
+	println("=====     >>FINAL  TESTING =====")
+	println("===========================================================")
 }
 tasks.named('test') {
     // Use junit platform for unit tests.
