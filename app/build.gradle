@@ -59,6 +59,12 @@ jar {
 repositories {
     // Use JCenter for resolving dependencies.
     jcenter()
+    
+    //Varios Repositorios
+    maven {
+        url "https://maven.springframework.org/release"
+    }
+    
 }
 
 dependencies {
@@ -70,7 +76,17 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:29.0-jre'
+    
+    //LIBRERIAS IMPLEMENTADAS 
+    
+    // MONGO DB
+    implementation 'org.mongodb:mongodb-driver-embedded:3.8.2'
+
+	// LOG4J PARA USO DE LOGS
+	implementation 'com.weicoder:log4j:3.4.5-jdk8'
+
 }
+
 
 application {
     //MAIN CLASS SOLO PARA APPLICATION CUANDO ES LLAMADO POR GRADLE -Q RUN "NombreJar"
