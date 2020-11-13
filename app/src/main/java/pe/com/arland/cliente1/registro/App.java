@@ -37,10 +37,10 @@ public class App {
         //I- SECCION DE INTERACION DE INTERFASE 
         System.out.print("Desea utilizar " + 
           "vehiculos electricos (1) o a gasolina (2):");
-        Scanner reader = new Scanner(System.in); 
-        String eleccion = reader.next(); 
+        //Scanner reader = new Scanner(System.in); 
+        //String eleccion = reader.next(); 
 
-        //String eleccion = "1"; 
+        String eleccion = "1"; 
         
         //F- SECCION DE INTERACION DE INTERFASE 
         
