@@ -39,6 +39,9 @@ public class App {
           "vehiculos electricos (1) o a gasolina (2):");
         Scanner reader = new Scanner(System.in); 
         String eleccion = reader.next(); 
+
+        //String eleccion = "1"; 
+        
         //F- SECCION DE INTERACION DE INTERFASE 
         
         //I- SECCION DE PROCESAMIENTO DE LA SELECCION
@@ -82,7 +85,7 @@ public class App {
      	
      	
     	//F-PRUEBA UNITARIA MANUAL       	
-        return "ESO ES TODO ";
+        return null;
     }
 
     public static void main(String[] args) {

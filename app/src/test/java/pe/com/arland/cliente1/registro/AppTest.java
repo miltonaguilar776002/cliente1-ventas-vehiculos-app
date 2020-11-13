@@ -4,6 +4,11 @@
 package pe.com.arland.cliente1.registro;
 
 import org.junit.jupiter.api.Test;
+
+import pe.com.arland.cliente1.registro.entity.VehiculoAutomovilBase;
+import pe.com.arland.cliente1.registro.entity.factory.FabricaVehiculoElectricidad;
+import pe.com.arland.cliente1.registro.entity.factory.IFabricaVehiculo;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -11,4 +16,6 @@ class AppTest {
       App classUnderTest = new App();
       assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+    
+    
 }
