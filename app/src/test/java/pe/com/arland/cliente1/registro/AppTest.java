@@ -17,5 +17,8 @@ class AppTest {
       assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
     
-    
+    @Test 
+    void mySimpleTest () { 
+          // Mi lógica de prueba aquí 
+    } 
 }
