@@ -16,7 +16,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 
+@DisplayName ("Test del Flujo principal de Ventas de Vehiculos")
 class AppTest {
 	
 	/* Intanciando la aplicacion principal
@@ -41,18 +43,20 @@ class AppTest {
 		System.out.println("****************************************");
 	}
 
+	@DisplayName ("Metodo UNO ")
 	@Test
 	void testOne() {
 		System.out.println("TEST 1");
 	}
 
+	@DisplayName ("Metodo DOS Deshabilitado ")
 	@Disabled
 	@Test
 	void testTwo() {
 		System.out.println("TEST 2");
 	}
 	
-	
+	@DisplayName ("Metodo TRES ")
 	@Test
 	void testThree() {
 		System.out.println("TEST 3");
