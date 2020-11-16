@@ -6,6 +6,7 @@ public class TelefonoEntity {
 	private String area;
 	private Integer numero;
 	private String operador;
+	
 	public String getTipo() {
 		return tipo;
 	}

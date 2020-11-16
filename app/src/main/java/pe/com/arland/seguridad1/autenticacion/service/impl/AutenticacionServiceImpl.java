@@ -2,11 +2,11 @@ package pe.com.arland.seguridad1.autenticacion.service.impl;
 
 import pe.com.arland.cliente1.registro.entity.ClienteEntity;
 import pe.com.arland.cliente1.registro.entity.UsuarioAplicacionEntity;
-import pe.com.arland.seguridad1.autenticacion.service.arlandAutenticacionService;
+import pe.com.arland.seguridad1.autenticacion.service.AutenticacionService;
 
-public class arlandAutenticacionServiceImpl implements arlandAutenticacionService {
+public class AutenticacionServiceImpl implements AutenticacionService {
 
-	public arlandAutenticacionServiceImpl() {
+	public AutenticacionServiceImpl() {
 		// TODO Auto-generated constructor stub
 	}
 
