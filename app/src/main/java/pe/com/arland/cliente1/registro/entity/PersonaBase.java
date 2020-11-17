@@ -1,6 +1,7 @@
 package pe.com.arland.cliente1.registro.entity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class PersonaBase {
 	private String nombrePrincipal;
@@ -11,8 +12,9 @@ public abstract class PersonaBase {
 	private String numeroDocumento;
     private String correoElectronico;	
 	
-	private ArrayList<DireccionEntity> direcciones;
-	private ArrayList<TelefonoEntity> telefonos;
+	private List<DireccionEntity> direcciones = new ArrayList<DireccionEntity>();
+	private List<TelefonoEntity> telefonos = new ArrayList<TelefonoEntity>();
+	
 	public String getNombrePrincipal() {
 		return nombrePrincipal;
 	}
@@ -49,41 +51,46 @@ public abstract class PersonaBase {
 	public void setNumeroDocumento(String numeroDocumento) {
 		this.numeroDocumento = numeroDocumento;
 	}
-	public ArrayList<DireccionEntity> getDirecciones() {
-		return direcciones;
-	}
-	public void setDirecciones(ArrayList<DireccionEntity> direcciones) {
-		this.direcciones = direcciones;
-	}
-	public ArrayList<TelefonoEntity> getTelefonos() {
-		return telefonos;
-	}
-	public void setTelefonos(ArrayList<TelefonoEntity> telefonos) {
-		this.telefonos = telefonos;
-	}
-
 	public String getCorreoElectronico() {
 		return correoElectronico;
 	}
 	public void setCorreoElectronico(String correoElectronico) {
 		this.correoElectronico = correoElectronico;
 	}
-
-	public PersonaBase(String nombrePrincipal, String nombresSecundarios, String apellidoPaterno, String apellidoMaterno,
-			String tipoDocumento, String numeroDocumento, ArrayList<DireccionEntity> direcciones,
-			ArrayList<TelefonoEntity> telefonos, String correoElectronico) {
+	public List<DireccionEntity> getDirecciones() {
+		return direcciones;
+	}
+	public void setDirecciones(List<DireccionEntity> direcciones) {
+		this.direcciones = direcciones;
+	}
+	public List<TelefonoEntity> getTelefonos() {
+		return telefonos;
+	}
+	public void setTelefonos(List<TelefonoEntity> telefonos) {
+		this.telefonos = telefonos;
+	}
+	public PersonaBase(String nombrePrincipal, String nombresSecundarios, String apellidoPaterno,
+			String apellidoMaterno, String tipoDocumento, String numeroDocumento, String correoElectronico,
+			List<DireccionEntity> direcciones, List<TelefonoEntity> telefonos) {
 		super();
+		
+		List<DireccionEntity> direccionestmp = new ArrayList<>();
+		direccionestmp.addAll(direcciones);
+
+		List<TelefonoEntity> telefonostmp = new ArrayList<>();
+		telefonostmp.addAll(telefonos);
+		
 		this.nombrePrincipal = nombrePrincipal;
 		this.nombresSecundarios = nombresSecundarios;
 		this.apellidoPaterno = apellidoPaterno;
 		this.apellidoMaterno = apellidoMaterno;
 		this.tipoDocumento = tipoDocumento;
 		this.numeroDocumento = numeroDocumento;
+		this.correoElectronico = correoElectronico;
 		this.direcciones = direcciones;
 		this.telefonos = telefonos;
-		this.correoElectronico = correoElectronico;
 	}
-	
+
 	
 	
 }

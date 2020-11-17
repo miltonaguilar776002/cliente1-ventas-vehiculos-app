@@ -2,10 +2,15 @@ package pe.com.arland.seguridad1.autenticacion.service.impl;
 
 import pe.com.arland.cliente1.registro.entity.ClienteEntity;
 import pe.com.arland.cliente1.registro.entity.UsuarioAplicacionEntity;
+import pe.com.arland.seguridad1.autenticacion.repository.ClientesRepository;
+import pe.com.arland.seguridad1.autenticacion.repository.UsuariosAplicacionRepository;
 import pe.com.arland.seguridad1.autenticacion.service.AutenticacionService;
 
 public class AutenticacionServiceImpl implements AutenticacionService {
 
+	private UsuariosAplicacionRepository usuarioDAO;
+	private ClientesRepository clienteDAO;
+	
 	public AutenticacionServiceImpl() {
 		// TODO Auto-generated constructor stub
 	}
@@ -18,13 +23,19 @@ public class AutenticacionServiceImpl implements AutenticacionService {
 
 	@Override
 	public ClienteEntity recuperarCliente(String tipoDocumento, String NumeroDocumento) {
-		// TODO Auto-generated method stub
+		ClienteEntity cliente;
+		cliente = clienteDAO.getClienteByPersonId(tipoDocumento, NumeroDocumento);
+		if (cliente!=null) {return cliente;}
 		return null;
 	}
 
 	@Override
 	public UsuarioAplicacionEntity validarUsuarioAplicacionporCodUsuario(String codUsuario, String Clave) {
-		// TODO Auto-generated method stub
+		UsuarioAplicacionEntity usuario;
+		usuario = usuarioDAO.getUsuarioAplicacionbByUserClave(codUsuario, Clave);
+		if (usuario!=null) {
+			return usuario;
+		}
 		return null;
 	}
 

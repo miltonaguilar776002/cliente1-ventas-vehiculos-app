@@ -2,9 +2,15 @@ package pe.com.arland.cliente1.registro.entity;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class UsuarioAplicacionEntity extends PersonaBase{
 
+	private String codUsuario;
+	private String claveUsuario;
+	private Date fechaRegistro;
+	private String estado;
+	
 	public String getCodUsuario() {
 		return codUsuario;
 	}
@@ -29,21 +35,17 @@ public class UsuarioAplicacionEntity extends PersonaBase{
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	private String codUsuario;
-	private String claveUsuario;
-	private Date fechaRegistro;
-	private String estado;
 	public UsuarioAplicacionEntity(String nombrePrincipal, String nombresSecundarios, String apellidoPaterno,
-			String apellidoMaterno, String tipoDocumento, String numeroDocumento,
-			ArrayList<DireccionEntity> direcciones, ArrayList<TelefonoEntity> telefonos, String codUsuario,
-			String claveUsuario, Date fechaRegistro, String estado, String correoElectronico) {
+			String apellidoMaterno, String tipoDocumento, String numeroDocumento, String correoElectronico,
+			List<DireccionEntity> direcciones, List<TelefonoEntity> telefonos, String codUsuario, String claveUsuario,
+			Date fechaRegistro, String estado) {
 		super(nombrePrincipal, nombresSecundarios, apellidoPaterno, apellidoMaterno, tipoDocumento, numeroDocumento,
-				direcciones, telefonos, correoElectronico);
+				correoElectronico, direcciones, telefonos);
 		this.codUsuario = codUsuario;
 		this.claveUsuario = claveUsuario;
 		this.fechaRegistro = fechaRegistro;
 		this.estado = estado;
 	}
-	
+
 	
 }
