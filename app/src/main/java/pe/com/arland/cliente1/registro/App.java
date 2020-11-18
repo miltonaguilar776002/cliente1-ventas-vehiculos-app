@@ -5,11 +5,18 @@ package pe.com.arland.cliente1.registro;
 
 import java.util.Scanner;
 
+import pe.com.arland.cliente1.registro.entity.ClienteEntity;
+import pe.com.arland.cliente1.registro.entity.UsuarioAplicacionEntity;
 import pe.com.arland.cliente1.registro.entity.VehiculoAutomovilBase;
 import pe.com.arland.cliente1.registro.entity.VehiculoScooterBase;
 import pe.com.arland.cliente1.registro.entity.factory.FabricaVehiculoElectricidad;
 import pe.com.arland.cliente1.registro.entity.factory.FabricaVehiculoGasolina;
 import pe.com.arland.cliente1.registro.entity.factory.IFabricaVehiculo;
+import pe.com.arland.seguridad1.autenticacion.repository.UsuariosAplicacionRepository;
+import pe.com.arland.seguridad1.autenticacion.repository.mongodb.ClientesRepositoryImpl;
+import pe.com.arland.seguridad1.autenticacion.repository.mongodb.UsuariosAplicacionRepositoryImpl;
+import pe.com.arland.seguridad1.autenticacion.service.AutenticacionService;
+import pe.com.arland.seguridad1.autenticacion.service.impl.AutenticacionServiceImpl;
 
 public class App {
 	
@@ -17,6 +24,35 @@ public class App {
 	 public static int nScooters = 2; 
 	  
     public String getGreeting() {
+    	
+    	
+    	//I-MARCA DE CONTROL 
+    	System.out.println("=============================================");
+     	System.out.println("====    INICIANDO EL PROGRAMA LOGIN  ====");
+     	System.out.println("=============================================");
+     	//F-MARCA DE CONTROL 
+     	
+     	AutenticacionServiceImpl serviceAuth = new AutenticacionServiceImpl() ;
+     	serviceAuth.setClienteDAO(new ClientesRepositoryImpl() );
+     	serviceAuth.setUsuarioDAO(new UsuariosAplicacionRepositoryImpl());
+     	
+     	ClienteEntity cliente = serviceAuth.recuperarCliente("01", "2010092874");
+     	UsuarioAplicacionEntity usuario  = serviceAuth.validarUsuarioAplicacionporCodUsuario("USR2002", "");
+     	
+     	if (cliente.getNombrePrincipal().equals(usuario.getNombrePrincipal())) {
+     		System.out.println("SI Se trata de la misma Persona");
+     	}
+     	else {
+     		System.out.println("NO Se trata de la misma Persona");
+     	}
+     	
+    	//I-MARCA DE CONTROL 
+    	System.out.println("=============================================");
+     	System.out.println("====    FINAL EL PROGRAMA LOGIN  ====");
+     	System.out.println("=============================================");
+     	//F-MARCA DE CONTROL 
+     	
+     	
      	
     	//I-MARCA DE CONTROL 
     	System.out.println("=============================================");

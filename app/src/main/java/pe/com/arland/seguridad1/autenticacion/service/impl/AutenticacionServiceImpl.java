@@ -4,12 +4,33 @@ import pe.com.arland.cliente1.registro.entity.ClienteEntity;
 import pe.com.arland.cliente1.registro.entity.UsuarioAplicacionEntity;
 import pe.com.arland.seguridad1.autenticacion.repository.ClientesRepository;
 import pe.com.arland.seguridad1.autenticacion.repository.UsuariosAplicacionRepository;
+import pe.com.arland.seguridad1.autenticacion.repository.mongodb.ClientesRepositoryImpl;
+import pe.com.arland.seguridad1.autenticacion.repository.mongodb.UsuariosAplicacionRepositoryImpl;
 import pe.com.arland.seguridad1.autenticacion.service.AutenticacionService;
 
 public class AutenticacionServiceImpl implements AutenticacionService {
 
-	private UsuariosAplicacionRepository usuarioDAO;
-	private ClientesRepository clienteDAO;
+	/*===========================================*/
+	UsuariosAplicacionRepository usuarioDAO;
+	ClientesRepository  clienteDAO;
+	
+	public UsuariosAplicacionRepository getUsuarioDAO() {
+		return usuarioDAO;
+	}
+
+	public void setUsuarioDAO(UsuariosAplicacionRepository usuarioDAO) {
+		this.usuarioDAO = usuarioDAO;
+	}
+
+	public ClientesRepository getClienteDAO() {
+		return clienteDAO;
+	}
+
+	public void setClienteDAO(ClientesRepository clienteDAO) {
+		this.clienteDAO = clienteDAO;
+	}
+
+	/*===========================================*/
 	
 	public AutenticacionServiceImpl() {
 		// TODO Auto-generated constructor stub

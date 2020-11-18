@@ -48,12 +48,14 @@ public class ClientesRepositoryImpl implements ClientesRepository {
 			
 			cliente = new ClienteEntity(
 					// String nombrePrincipal, String nombresSecundarios, String apellidoPaterno,String apellidoMaterno,
-					"Juan ", "Jose", "Fabian", "Meza",
+					"Juan", "Jose", "Fabian", "Meza",
 					// tipoDocumento, String numeroDocumento,String correoElectronico ,List<DireccionEntity> direcciones, List<TelefonoEntity> telefonos
 					"01", "2010092874", "JJFabianMeza@gmail.com", listaDirecciones, listaTelefonos,	
 					//String idCliente, String tipoCliente, Date fechaRegistro
 					"CLI00271","VIP",new Date()
 					);
+			
+			return cliente;
 		}
 		
 		
