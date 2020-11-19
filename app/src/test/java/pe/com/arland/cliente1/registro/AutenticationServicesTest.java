@@ -144,6 +144,7 @@ class AutenticationServicesTest {
 	}
 	
 	
+	
 	@Tag("Individual")
 	@DisplayName ("AUTENTICACION - Comparacion de objetos Direccion USR2002, USR2005")
 	@Test
