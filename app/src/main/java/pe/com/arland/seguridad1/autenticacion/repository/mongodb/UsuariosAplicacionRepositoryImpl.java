@@ -85,7 +85,7 @@ public class UsuariosAplicacionRepositoryImpl implements UsuariosAplicacionRepos
 					"PERU", "Lima", "Lima", "Pueblo Libre",
 					// String tipoVia,String nombreVia, Integer numeroVia, String interiorVia,
 					// String referencia
-					"AV", "Bolivar", 123, "", "Cerca del Hospital Santa Rosa");
+					"AV", "Bolivar", 345, "DPTO 606", "Cerca del Hospital Santa Rosa");
 			listaDirecciones.add(direccion1);
 
 			// String tipo, String area, Integer numero, String operador
@@ -95,7 +95,7 @@ public class UsuariosAplicacionRepositoryImpl implements UsuariosAplicacionRepos
 			usuario = new UsuarioAplicacionEntity(
 					// String nombrePrincipal, String nombresSecundarios, String
 					// apellidoPaterno,String apellidoMaterno,
-					"Juan ", "Jose", "Fabian", "Meza",
+					"Juan", "Jose", "Fabian", "Meza",
 					// tipoDocumento, String numeroDocumento,String correoElectronico
 					"01", "2010092874", "JJFabianMeza@gmail.com", listaDirecciones, listaTelefonos,
 					// String codUsuario,String claveUsuario, Date fechaRegistro, String estado
@@ -120,11 +120,39 @@ public class UsuariosAplicacionRepositoryImpl implements UsuariosAplicacionRepos
 			usuario = new UsuarioAplicacionEntity(
 					// String nombrePrincipal, String nombresSecundarios, String
 					// apellidoPaterno,String apellidoMaterno,
-					"Juan ", "Jose", "Garcia", "Lopez",
+					"Juan", "Jose", "Garcia", "Lopez",
 					// tipoDocumento, String numeroDocumento,String correoElectronico
 					"01", "017364643", "JJGarciaLopez@gmail.com", listaDirecciones, listaTelefonos,
 					// String codUsuario,String claveUsuario, Date fechaRegistro, String estado
 					"USR2003", "p@ssw0rd", new Date(), "01");
+
+		}
+		
+		
+		
+		
+		if (codigoUsuario.equals("USR2005")) {
+
+			direccion1 = new DireccionEntity(
+					// String pais, String region, String provincia, String distrito,
+					"PERU", "Lima", "Lima", "Pueblo Libre",
+					// String tipoVia,String nombreVia, Integer numeroVia, String interiorVia,
+					// String referencia
+					"AV", "Bolivar", 345, "DPTO 606", "Cerca del Hospital Santa Rosa");
+			listaDirecciones.add(direccion1);
+
+			// String tipo, String area, Integer numero, String operador
+			telefono1 = new TelefonoEntity("Celular", "01", 909876765, "Telefonica");
+			listaTelefonos.add(telefono1);
+
+			usuario = new UsuarioAplicacionEntity(
+					// String nombrePrincipal, String nombresSecundarios, String
+					// apellidoPaterno,String apellidoMaterno,
+					"Irene", "Dalia", "Robles", "Talavera",
+					// tipoDocumento, String numeroDocumento,String correoElectronico
+					"01", "40367383", "Irene.Robles.1992@gmail.com", listaDirecciones, listaTelefonos,
+					// String codUsuario,String claveUsuario, Date fechaRegistro, String estado
+					"USR2002", "p@ssw0rd", new Date(), "01");
 
 		}
 
