@@ -1,5 +1,6 @@
 package pe.com.arland.ventas1.service.impl;
 
+import pe.com.arland.cliente1.registro.entity.BoletaEntity;
 import pe.com.arland.cliente1.registro.entity.ClienteEntity;
 import pe.com.arland.cliente1.registro.entity.FacturaEntity;
 import pe.com.arland.cliente1.registro.entity.UsuarioAplicacionEntity;
@@ -31,6 +32,12 @@ public class VentasServiceImpl implements VentasService {
 		if (factura!=null) {return factura;}
 		return null;
 		
+	}
+
+	@Override
+	public BoletaEntity recuperarBoleta(String serieComprobante, Long numeroComprobante) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
