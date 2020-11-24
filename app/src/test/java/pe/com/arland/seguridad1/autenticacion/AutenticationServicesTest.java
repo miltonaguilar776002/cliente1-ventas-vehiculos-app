@@ -1,4 +1,4 @@
-package pe.com.arland.cliente1.registro;
+package pe.com.arland.seguridad1.autenticacion;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -142,8 +142,6 @@ class AutenticationServicesTest {
      	//EJEMPLO ASSERTNOTNULL OBJETOS
      	assertNotNull(usuario, "Usuario registrado con codigo "+ codUsuario +"No esta registrado" );
 	}
-	
-	
 	
 	@Tag("Individual")
 	@DisplayName ("AUTENTICACION - Comparacion de objetos Direccion USR2002, USR2005")
