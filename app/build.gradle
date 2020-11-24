@@ -127,9 +127,9 @@ task testear {
 }
 tasks.named('test') {
     // Use junit platform for unit tests.
-    //useJUnitPlatform()
+    useJUnitPlatform()
     
-    useJUnitPlatform{
+    //useJUnitPlatform{
      //includeTags 'Individual'
      //excludeTags 'Individual'
 
@@ -144,6 +144,5 @@ tasks.named('test') {
 		//**setExcludePatterns "*Resta","*Suma"
         //**setIncludePatterns "*Resta","*Suma"
      //}
-     
-    }
+    //}
 }
