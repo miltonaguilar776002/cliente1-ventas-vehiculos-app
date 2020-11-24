@@ -84,6 +84,9 @@ dependencies {
 
 	// LOG4J PARA USO DE LOGS
 	implementation 'com.weicoder:log4j:3.4.5-jdk8'
+	
+	// LIBRERIAS DE TERCEROS
+	testCompile("org.hamcrest:hamcrest-core:${hamcrest}")
 
 }
 
@@ -92,6 +95,8 @@ application {
     //MAIN CLASS SOLO PARA APPLICATION CUANDO ES LLAMADO POR GRADLE -Q RUN "NombreJar"
     mainClass = 'pe.com.arland.cliente1.registro.App'
 }
+
+
 
 task compilar {
 	println("===========================================================")
@@ -127,22 +132,22 @@ task testear {
 }
 tasks.named('test') {
     // Use junit platform for unit tests.
-    useJUnitPlatform()
+    //useJUnitPlatform()
     
-    //useJUnitPlatform{
+    useJUnitPlatform{
      //includeTags 'Individual'
      //excludeTags 'Individual'
 
  	 //excludeEngines 'junit-jupiter'
      //includeEngines 'junit-vintage'
       
-	//filter {
+	filter {
         //include specific method in any of the tests
-        //includeTestsMatching "*CalculadoraTest"
+        includeTestsMatching "*CalculadoraTest"
         //includeTestsMatching "*testSuma"
         //excludeTestsMatching "*testSuma"
 		//**setExcludePatterns "*Resta","*Suma"
         //**setIncludePatterns "*Resta","*Suma"
-     //}
-    //}
+     }
+    }
 }
