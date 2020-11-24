@@ -86,7 +86,7 @@ dependencies {
 	implementation 'com.weicoder:log4j:3.4.5-jdk8'
 	
 	// LIBRERIAS DE TERCEROS
-	testCompile("org.hamcrest:hamcrest-core:${hamcrest}")
+	testCompile('org.hamcrest:hamcrest-core:2.2')
 
 }
 
