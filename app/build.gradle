@@ -87,6 +87,9 @@ dependencies {
 	
 	// LIBRERIAS DE TERCEROS
 	implementation 'org.hamcrest:hamcrest-core:2.2'
+	
+	// TEST PARAMETRIZADOS
+	implementation 'org.junit.jupiter:junit-jupiter-params:5.7.0'
 
 }
 

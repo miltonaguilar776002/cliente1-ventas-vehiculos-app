@@ -1,4 +1,4 @@
-package pe.com.arland.ventas1.consultas;
+package pe.com.arland.ventas1.consultas.Parameter;
 
 import static org.junit.jupiter.api.Assertions.*;
 
