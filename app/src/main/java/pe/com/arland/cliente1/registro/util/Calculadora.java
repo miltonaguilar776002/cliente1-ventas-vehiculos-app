@@ -14,6 +14,9 @@ public class Calculadora {
 	}
 
 	public static double division(double valor1 , double valor2) {
+		if (valor2 == 0) {
+			throw new ArithmeticException("No se puede dividir entre cero");
+		}
 		return valor1 / valor2 ;
 	}
 
